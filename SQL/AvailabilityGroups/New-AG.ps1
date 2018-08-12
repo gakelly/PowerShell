@@ -18,8 +18,7 @@
 
 .EXAMPLE
 
-   Another example of how to use this cmdlet
-
+    New-AG -AGName "AG-Name" -PrimaryInstance P1server\SQL01 -SecondaryInstance P2Server\SQL01 
 #>
 function New-AG {
 
