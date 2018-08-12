@@ -3,15 +3,12 @@
 
 .Synopsis
 
-
    SQL Patching Script
 
 
 .DESCRIPTION
 
-
    Installs and tests patches for SQL Boxes
-
 
 .EXAMPLE
 
@@ -68,33 +65,21 @@ function Start-SQLServerPatches
                    [ValidateSet("Production","Pre-Production", "Development")]
 
 
-
         $Environment,
-
-
 
         # Param2 help description
 
-
-
         [Switch]
-
 
         $CheckPatches,
 
-
-
         [switch]
-
 
         $installPatches,
 
-
         [switch]
 
-
         $rebootPrimary,
-
 
         [switch]
 
@@ -419,10 +404,6 @@ else {"$system,Unable to connect to remote system ,please check further" }# | Ou
 
 
 　
-
-
-　
-
 
         }
 
