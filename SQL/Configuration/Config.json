@@ -1,0 +1,94 @@
+{
+"InstallSQL":
+            {
+                "UpdateEnabled" : "True",
+                "UpdateSource" : "MU",
+                "Features" : "SQLEngine,Replication,FullText,CONN",
+                "InstanceName"  :  "SQL01",
+                "InstanceID" :  "SQL01",
+
+
+                "InstallSharedDir" : "C:\\Program Files\\Microsoft SQL Server",
+                "InstallSharedWOWDir" : "C:\\Program Files (x86)\\Microsoft SQL Server",
+                "InstanceDir" : "C:\\Program Files\\Microsoft SQL Server",
+
+
+                "InstallSQLDataDir" : "E:\\Microsoft SQL Server",
+                "SQLUserDBDir" : "E:\\Data\\Data",
+                "SQLUserDBLogDir" : "E:\\Logs\\Logs",
+                "SQLTempDBDir" : "E:\\TempDB\\TempDB",
+                "SQLTempDBLogDir" : "E:\\TempDB\\TempDB",
+                "SQLBackupDir"  :  "E:\\Backups\\Backups",
+
+
+                "FTSvcAccount" : "NT Service\\MSSQLFDLauncher$SQL01",
+                "SecurityMode" : "SQL",
+                "SAPwd" : "sa",
+                "SQLCollation" : "Latin1_General_CI_AS",
+
+                "SourcePath"  :  "\\\\SERVER\\SHARENAME"
+
+            },
+
+
+            "Drives" :
+            {
+               "Root" :
+                 {
+                "Name" : "E:\\",
+                "Label" : "_SQL01_E",
+                "BlockSize" :"4096",
+                "DriveSize" : "50GB"
+                 },
+
+                "Data" :
+                 {
+                "Name" : "E:\\DATA\\",
+                "Label" : "_SQL01_E_DATA",
+                "BlockSize" :"65536",
+                "DriveSize" :
+                    {
+                      "Small" : "90GB",
+                      "Medium" : "170GB",
+                      "Large"  : "350GB",
+                      "ExtraLarge" : "690GB"
+                    }
+                 },
+
+                 "Logs" :
+                 {
+                "Name" : "E:\\LOGS\\",
+                "Label" : "_SQL01_E_Logs",
+                "BlockSize" :"65536",
+                "DriveSize" :
+                    {
+                      "Small" : "20GB",
+                      "Medium" : "40GB",
+                      "Large"  : "90GB",
+                      "ExtraLarge" : "345GB"
+                    }
+                 },
+                 "Temp" :
+                 {
+                "Name" : "E:\\TEMPDB\\",
+                "Label" : "_SQL01_E_TEMPDB",
+                "BlockSize" :"65536",
+                "DriveSize" :
+                    {
+                      "Small" : "45GB",
+                      "Medium" : "85GB",
+                      "Large"  : "175GB",
+                      "ExtraLarge" : "345GB"
+                    }
+                 }
+
+                },
+
+
+            "Folders" :
+            {
+            "EDrive" : ["E:\\Backups", "E:\\Data", "E:\\Logs","E:\\TempDB"],
+            "BackupsFolders" : ["E:\\Backups\\Backups","E:\\Backups\\Logshipping","E:\\Backups\\NotBackedUp","E:\\Backups\\Repl_Data","E:\\Backups\\Scripts,","E:\\Backups\\Scripts\\Recovery"]
+
+        }
+    }
